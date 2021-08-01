@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Chess_Timer</string>
+    <string name="start">Start</string>
+    <string name="settings">Settings</string>
+    <string name="exit">Exit</string>
+    <string name="done">Done</string>
+    <string name="time">%1$d : %2$d</string>
+    <string name="time_has_ended">Time has ended</string>
+    <string name="_10_minutes">10 minutes</string>
+    <string name="_15_minutes">15 minutes</string>
+    <string name="_30_minutes">30 minutes</string>
+    <string name="_60_minutes">60 minutes</string>
+</resources>
