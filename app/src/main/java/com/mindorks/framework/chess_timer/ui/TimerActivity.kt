@@ -77,7 +77,7 @@ class TimerActivity : AppCompatActivity(), SetTimerDialogFragmentListener {
             countDownTimerPlayerOne.timerPause()
             player_one.isEnabled  = false
             pausedPlayer1.isVisible = true
-        }else{
+        }else if(countDownTimerPlayerTwo.isRunning){
             Log.i("Player 2", "Paused")
             countDownTimerPlayerTwo.timerPause()
             player_two.isEnabled = false
