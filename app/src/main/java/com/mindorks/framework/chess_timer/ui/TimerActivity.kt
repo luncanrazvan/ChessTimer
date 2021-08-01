@@ -1,5 +1,6 @@
 package com.mindorks.framework.chess_timer.ui
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -22,14 +23,18 @@ class TimerActivity : AppCompatActivity(), SetTimerDialogFragmentListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_timer)
 
+        val clickSound = MediaPlayer.create(this, R.raw.click_sound)
+
         showSetTimerDialog()
 
         player_one.setOnClickListener {
             changePlayerOneDoneVisibility()
+            clickSound.start()
         }
 
         player_two.setOnClickListener {
             changePlayerTwoDoneVisibility()
+            clickSound.start()
         }
 
         resume.setOnClickListener {
