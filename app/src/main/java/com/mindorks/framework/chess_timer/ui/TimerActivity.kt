@@ -109,6 +109,7 @@ class TimerActivity : AppCompatActivity(), SetTimerDialogFragmentListener {
 
     private fun showSetTimerDialog(){
         val setTimerFragment = SetTimerDialogFragment()
+        setTimerFragment.isCancelable = false
         setTimerFragment.show(supportFragmentManager, "Set Timer Value dialog is up")
     }
 
