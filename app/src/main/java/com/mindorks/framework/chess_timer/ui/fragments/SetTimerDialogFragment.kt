@@ -17,17 +17,13 @@ class SetTimerDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
-
             val builder = AlertDialog.Builder(it)
-
             val inflater = requireActivity().layoutInflater
-
             val view = inflater.inflate(R.layout.set_timer_layout, null)
 
             setUpDialog(view)
             builder.setTitle("Select a time for each player")
                     .setView(view)
-            dialog?.setCanceledOnTouchOutside(false)
             builder.create()
 
         } ?: throw IllegalStateException("Activity cannot be null")
@@ -46,7 +42,6 @@ class SetTimerDialogFragment : DialogFragment() {
                 2 -> timerValue = 1800000
                 3 -> timerValue = 3600000
             }
-
             Log.i("Timer", "Timer set at value $timerValue")
         }
 
