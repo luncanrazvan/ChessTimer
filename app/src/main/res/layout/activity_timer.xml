@@ -35,8 +35,8 @@
 
     <TextView
         android:id="@+id/timerPlayer2"
-        android:layout_width="282dp"
-        android:layout_height="177dp"
+        android:layout_width="340dp"
+        android:layout_height="170dp"
         android:gravity="center_horizontal"
         android:text=""
         android:textColor="@color/black"
@@ -50,8 +50,8 @@
 
     <TextView
         android:id="@+id/timerPlayer1"
-        android:layout_width="277dp"
-        android:layout_height="178dp"
+        android:layout_width="340dp"
+        android:layout_height="170dp"
         android:gravity="center_horizontal"
         android:rotation="180"
         android:text=""
@@ -60,25 +60,26 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.709" />
+        app:layout_constraintVertical_bias="0.686" />
 
     <ImageButton
         android:id="@+id/pause"
-        android:layout_width="59dp"
-        android:layout_height="54dp"
+        android:layout_width="49dp"
+        android:layout_height="45dp"
+        android:background="@drawable/ic_pause"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.326"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/ic_pause" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/resume"
-        android:layout_width="50dp"
-        android:layout_height="55dp"
+        android:layout_width="43dp"
+        android:layout_height="48dp"
         android:background="@drawable/ic_resume"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
