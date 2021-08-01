@@ -23,26 +23,29 @@ class TimerActivity : AppCompatActivity(), SetTimerDialogFragmentListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_timer)
 
-        val clickSound = MediaPlayer.create(this, R.raw.click_sound)
+        val clickSoundDone = MediaPlayer.create(this, R.raw.click_sound)
+        val clickSoundPauseResume = MediaPlayer.create(this, R.raw.pause_resume_click)
 
         showSetTimerDialog()
 
         player_one.setOnClickListener {
             changePlayerOneDoneVisibility()
-            clickSound.start()
+            clickSoundDone.start()
         }
 
         player_two.setOnClickListener {
             changePlayerTwoDoneVisibility()
-            clickSound.start()
+            clickSoundDone.start()
         }
 
         resume.setOnClickListener {
             resumeGame()
+            clickSoundPauseResume.start()
         }
 
         pause.setOnClickListener {
             pauseGame()
+            clickSoundPauseResume.start()
         }
     }
 
@@ -110,7 +113,6 @@ class TimerActivity : AppCompatActivity(), SetTimerDialogFragmentListener {
     }
 
     override fun onReturnValue(timerValue: Long) {
-        
         Log.i("Return Value", "On Returned Value $timerValue")
         initializeTimers(timerValue)
         countDownTimerPlayerTwo.startTime()
