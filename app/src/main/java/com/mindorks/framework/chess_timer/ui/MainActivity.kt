@@ -12,13 +12,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         start_button.setOnClickListener {
-            goToTimerSettings()
+            goToTimer()
+        }
+
+        settings_button.setOnClickListener{
+            gotToSetting()
         }
     }
 
-    private fun goToTimerSettings(){
+    private fun goToTimer(){
         val intent = Intent(this, TimerActivity::class.java)
         startActivity(intent);
+        finish()
+    }
+
+    private fun gotToSetting(){
+        val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
         finish()
     }
 }
